@@ -68,6 +68,20 @@
 	<artifactId>spring-context-support</artifactId>
 	<version>4.2.4.RELEASE</version>
 </dependency>
+<!-- Niezbędne do @RunWith(SpringJUnit4ClassRunner.class) -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-test</artifactId>
+	<version>4.2.4.RELEASE</version>
+</dependency>
+<!-- Niezbędne do StandardOutputStreamLog w CDPlayerTest -->
+<dependency>
+	<groupId>com.github.stefanbirkner</groupId>
+	<artifactId>system-rules</artifactId>
+	<version>1.15.1</version>
+</dependency>
+
+
 
 	</dependencies>
 </project>

@@ -1,15 +1,16 @@
 package com.springinaction.knights;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import com.springinaction.knights.config.KnightConfig;
+import org.springframework.context.support.AbstractApplicationContext;
 
 public class KnightMain {
 
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(KnightConfig.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(
+				com.springinaction.knights.config.KnightConfig.class);
 		Knight knight = (Knight) context.getBean("knight");
 		knight.embarkOnQuest();
-		context.close();
+		((AbstractApplicationContext) context).close();
 	}
 }
